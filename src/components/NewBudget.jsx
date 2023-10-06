@@ -5,12 +5,14 @@ const NewBudget = ({budget, setBudget, setValidBudget}) => {
     const handleChange = e => {
         const {value} = e.target;
         const numbersPattern = /^\d*(\.\d*)?$/;
-        if (numbersPattern.test(value)) setBudget(Number(e.target.value));
+        if (numbersPattern.test(value)) setBudget(value[0] === "0" ? value[1] : value);
     }
 
     const handleSubmit = e => {
         e.preventDefault();
-        setValidBudget(false);
+
+        setBudget(prevState => Number(prevState))
+        setValidBudget(true);
 
     }
 
