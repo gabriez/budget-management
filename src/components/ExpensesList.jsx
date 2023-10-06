@@ -14,8 +14,8 @@ const ExpensesList = ({expenses, deleteExpense, editExpense, filter}) => {
 
   return (
     <div className='listado-gastos contenedor'>
-      <h2>{expenses.map(containerExpenses)[0] !== undefined ? 'Gastos' : 'No ha agregado gastos'}</h2>
-      {expenses.map(containerExpenses)}
+      <h2>{expenses.length > 0 && expenses.map(containerExpenses)[0] !== undefined ? 'Gastos' : 'No ha agregado gastos'}</h2>
+      {expenses.length > 0 ?? expenses.map(containerExpenses)}
     </div>
   )
 }
