@@ -52,7 +52,7 @@ function App() {
 
 
   useEffect(() => {
-    localStorage.setItem('budget', JSON.stringify(budget) ?? 0);
+    localStorage.setItem('budget', JSON.stringify(budget) || 0);
   }, [budget])
 
   useEffect(()=> {
@@ -60,7 +60,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('expenses', JSON.stringify(expenses) ?? []);
+    localStorage.setItem('expenses', JSON.stringify(expenses) || []);
   }, [expenses])
 
   return (
