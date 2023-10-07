@@ -64,6 +64,7 @@ const Expense = ({expense, deleteExpense, editExpense}) => {
                                 Agregado el: 
                                 <span> {formatDate(date)}</span>
                             </p>
+                            <p className="cantidad-gasto gasto-mobile"> {formatBudget(quantity)} </p>
                         </div>
                     </div>
                     <p className="cantidad-gasto"> {formatBudget(quantity)} </p>

@@ -4,7 +4,7 @@ const Filters = ({filter, setFilter}) => {
   return (
     <div className='filtros sombra contenedor'>
       <form>
-        <div className="campo">
+        <div className="campo filtrar-flex">
             <label htmlFor="gastos">Filtrar gastos</label>
             <select name="gastos" id="gastos" value={filter} onChange={e => setFilter(e.target.value)}>
                     <option value="">--Seleccione una categoría--</option>
